@@ -1,0 +1,60 @@
+title: 'About Page'
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: content_bard
+        field: content.content_bard
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true
+  statistics:
+    display: Statistics
+    fields:
+      -
+        handle: statistics_title
+        field:
+          input_type: text
+          antlers: false
+          display: 'Statistics Title'
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: statistics_content
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          antlers: false
+          display: 'Statistics Content'
+          type: markdown
+          icon: markdown
+          listable: hidden

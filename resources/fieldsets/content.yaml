@@ -1,0 +1,136 @@
+title: Content
+fields:
+  -
+    handle: content_bard
+    field:
+      always_show_set_button: false
+      sets:
+        image:
+          display: Image
+          fields:
+            -
+              handle: image
+              field:
+                mode: grid
+                container: assets
+                restrict: false
+                allow_uploads: true
+                max_files: 1
+                display: Image
+                type: assets
+                icon: assets
+                listable: hidden
+            -
+              handle: caption
+              field:
+                input_type: text
+                antlers: false
+                display: Caption
+                type: text
+                icon: text
+                listable: hidden
+        video:
+          display: Video
+          fields:
+            -
+              handle: video
+              field:
+                display: Video
+                type: video
+                icon: video
+                listable: hidden
+            -
+              handle: caption
+              field:
+                input_type: text
+                antlers: false
+                display: Caption
+                type: text
+                icon: text
+                listable: hidden
+        quote:
+          display: Quote
+          fields:
+            -
+              handle: quote_content
+              field:
+                restrict: false
+                automatic_line_breaks: true
+                automatic_links: false
+                escape_markup: false
+                smartypants: false
+                antlers: false
+                display: 'Quote Content'
+                type: markdown
+                icon: markdown
+                listable: hidden
+            -
+              handle: quote_attribution
+              field:
+                input_type: text
+                antlers: false
+                display: 'Quote Attribution'
+                type: text
+                icon: text
+                listable: hidden
+        code_block:
+          display: 'Code Block'
+          fields:
+            -
+              handle: language_format
+              field:
+                input_type: text
+                antlers: false
+                display: 'Language format'
+                type: text
+                icon: text
+                listable: hidden
+            -
+              handle: code
+              field:
+                theme: material
+                mode: htmlmixed
+                indent_type: tabs
+                indent_size: 4
+                key_map: default
+                line_numbers: true
+                line_wrapping: true
+                display: Code
+                type: code
+                icon: code
+                listable: hidden
+            -
+              handle: caption
+              field:
+                input_type: text
+                antlers: false
+                display: Caption
+                type: text
+                icon: text
+                listable: hidden
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - table
+        - underline
+        - strikethrough
+        - superscript
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: false
+      fullscreen: true
+      allow_source: true
+      display: 'Content Bard'
+      type: bard
+      icon: bard
+      listable: hidden

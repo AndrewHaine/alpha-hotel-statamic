@@ -1,0 +1,93 @@
+title: 'Portfolio Items'
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: intro_text
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          antlers: false
+          display: 'Intro Text'
+          type: markdown
+          icon: markdown
+          listable: hidden
+      -
+        handle: client
+        field:
+          input_type: text
+          antlers: false
+          display: Client
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+      -
+        handle: client_logo
+        field:
+          mode: grid
+          container: assets
+          folder: portfolio/client-logos
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          display: 'Client Logo'
+          type: assets
+          icon: assets
+          width: 50
+          listable: hidden
+      -
+        handle: content_bard
+        field: content.content_bard
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required
+      -
+        handle: completion_date
+        field:
+          input_type: text
+          antlers: false
+          display: 'Completion Date'
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: item_type
+        field:
+          options:
+            work: Work
+            fun: Fun
+          multiple: false
+          clearable: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          display: 'Item Type'
+          type: select
+          icon: select
+          listable: hidden
+  preview:
+    display: Preview
+    fields:
+      -
+        import: preview_fields

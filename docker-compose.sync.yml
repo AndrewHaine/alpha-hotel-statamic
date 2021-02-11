@@ -1,0 +1,15 @@
+version: "3"
+services:
+  www:
+    build: .
+    volumes:
+      - alpha-hotel-statamic-sync:/var/www
+      - alpha-hotel-statamic-public-sync:/var/www/html
+    ports:
+      - 8080:80
+
+volumes:
+  alpha-hotel-statamic-sync:
+    external: true
+  alpha-hotel-statamic-public-sync:
+    external: true

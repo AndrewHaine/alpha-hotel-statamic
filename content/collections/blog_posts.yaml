@@ -1,0 +1,11 @@
+title: 'Blog Posts'
+template: default
+layout: layout
+taxonomies:
+  - blog_categories
+revisions: false
+date: true
+sort_dir: desc
+date_behavior:
+  past: public
+  future: private

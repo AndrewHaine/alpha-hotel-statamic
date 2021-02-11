@@ -1,0 +1,16 @@
+title: 'Portfolio Items'
+template: default
+layout: layout
+revisions: false
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+structure:
+  root: false
+  max_depth: 1
+  tree:
+    -
+      entry: 95fd0d9f-5165-49ca-8551-979e4d20f723
+    -
+      entry: 8395f69a-30a4-47dd-922c-3644635ebd67

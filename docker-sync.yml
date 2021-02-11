@@ -1,0 +1,24 @@
+version: "2"
+options:
+  compose-file-path: "./docker-compose.sync.yml"
+syncs:
+  alpha-hotel-statamic-sync:
+    src: "."
+    sync_excludes:
+      [
+        "node_modules",
+        ".docker-compose.yml",
+        "tools",
+        "bitbucket-pipelines.yml",
+        ".DS_Store",
+      ]
+    sync_strategy: "native_osx"
+    sync_userid: "1000"
+  alpha-hotel-statamic-public-sync:
+    src: "./public"
+    sync_excludes:
+      [
+        ".DS_Store",
+      ]
+    sync_strategy: "native_osx"
+    sync_userid: "1000"

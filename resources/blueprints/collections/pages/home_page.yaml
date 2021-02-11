@@ -1,0 +1,101 @@
+title: 'Home Page'
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: title_override
+        field:
+          antlers: false
+          display: 'Title Override'
+          type: textarea
+          icon: textarea
+          listable: hidden
+      -
+        handle: intro_text
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          antlers: false
+          display: 'Intro Text'
+          type: markdown
+          icon: markdown
+          listable: hidden
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true
+  blog:
+    display: Blog
+    fields:
+      -
+        handle: blog_title
+        field:
+          input_type: text
+          antlers: false
+          display: 'Blog Title'
+          type: text
+          icon: text
+          listable: hidden
+  portfolio:
+    display: Portfolio
+    fields:
+      -
+        handle: portfolio_title
+        field:
+          input_type: text
+          antlers: false
+          display: 'Portfolio Title'
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: portfolio_content
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          antlers: false
+          display: 'Portfolio Content'
+          type: markdown
+          icon: markdown
+          listable: hidden
+      -
+        handle: featured_items
+        field:
+          max_items: 2
+          mode: default
+          collections:
+            - portfolio_items
+          display: 'Featured Items'
+          type: entries
+          icon: entries
+          listable: hidden
